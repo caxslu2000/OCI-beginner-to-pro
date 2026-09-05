@@ -15,10 +15,3 @@ Repository dedicated to provisioning guides, network architecture, and best prac
    - [5. Post-Configuration & OS Hardening](#5-post-configuration--os-hardening)
 3. [Automation (OCI CLI / Terraform)](#-automation)
 4. [Contributing & License](#-contributing)
-
----
-
-## 🏗️ Architecture Overview
-
-The ASCII diagram below illustrates the standard network and security topology to host workloads on OCI with public and private subnet isolation:
-
