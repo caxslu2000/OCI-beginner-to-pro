@@ -1,0 +1,23 @@
+# 🌐 VCN IaC Setup (Terraform)
+
+Este diretório contém a declaração de Infraestrutura como Código (IaC) para o provisionamento automatizado de uma Virtual Cloud Network (VCN) no Oracle Cloud Infrastructure (OCI).
+
+## 🏗️ Arquitetura Provisionada
+
+O ficheiro `main.tf` traduz as configurações manuais do painel da Oracle para código declarativo, criando a fundação de rede necessária para alojar instâncias Compute. Os seguintes recursos são gerados automaticamente:
+
+1. **Virtual Cloud Network (VCN):** Bloco CIDR `10.0.0.0/16` configurado para isolamento de rede.
+2. **Internet Gateway (IGW):** Anexado à VCN para permitir a comunicação bidirecional com a internet pública.
+3. **Route Table:** Configurada para direcionar todo o tráfego externo (`0.0.0.0/0`) para o Internet Gateway.
+4. **Security List:** Atua como um firewall virtual (nível de sub-rede). Regras configuradas:
+   - **Ingress:** Permite SSH (Porta 22) e ICMP (Ping) para gestão remota.
+   - **Egress:** Aberto para todo o tráfego de saída.
+5. **Public Subnet:** Bloco CIDR `10.0.1.0/24` preparado para receber recursos que exigem IPs públicos, como servidores web ou *bastion hosts*.
+
+## 🚀 Como Utilizar
+
+Este código está preparado para ser integrado num pipeline CI/CD (como GitHub Actions) ou executado localmente através da CLI do Terraform.
+
+1. **Inicializar o Terraform:**
+   ```bash
+   terraform init
