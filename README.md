@@ -8,7 +8,7 @@ Repository dedicated to provisioning guides, network architecture, and best prac
 
 1. [Architecture Overview](#-architecture-overview)
 2. [Setup Guide](#-setup-guide)
-   - [1. Organization and Isolation (Compartments & IAM)](./Organization%20And%20IAM/)
+   - [1. Organization and Isolation (Compartments & IAM)](./Organization%20and%20IAM/)
    - [2. Network Architecture (VCN & Subnets)](./Network%20Architecture/)
    - [3. Security Rules (Security Lists & NSGs)](#3-security-rules-security-lists--nsgs)
    - [4. Compute Instances](./Compute%20Instances/)
